@@ -1,0 +1,8 @@
+# cat=agent/enable; type=boolean; label=Use real LLM: back the local A2A agent with netresearch/nr-llm instead of the bundled deterministic agent (requires nr-llm + a configured provider).
+llmEnabled = 0
+
+# cat=agent/enable; type=string; label=LLM model: model id passed to nr-llm when the real agent is enabled.
+llmModel = gpt-4o-mini
+
+# cat=agent/enable; type=boolean; label=Really act: allow the agent to perform real side effects on approval. Off = artifacts are produced but no external action is taken (safe demo mode).
+reallyApply = 0

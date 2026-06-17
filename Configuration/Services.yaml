@@ -1,0 +1,24 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Webconsulting\A2aIntegration\:
+    resource: '../Classes/*'
+
+  # Public so backend AJAX routes, the eID handlers and CLI can resolve them.
+  Webconsulting\A2aIntegration\Service\TaskRunner:
+    public: true
+
+  Webconsulting\A2aIntegration\Service\AgentCard:
+    public: true
+
+  Webconsulting\A2aIntegration\Service\TaskLogger:
+    public: true
+
+  Webconsulting\A2aIntegration\Service\SkillCatalog:
+    public: true
+
+  Webconsulting\A2aIntegration\Controller\SendController:
+    public: true

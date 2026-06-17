@@ -1,0 +1,40 @@
+{
+  "name": "webconsulting/a2a-integration",
+  "type": "typo3-cms-extension",
+  "description": "A2A (Agent2Agent Protocol) for TYPO3 v14 — the site publishes an Agent Card, and agents discover it and delegate tasks over JSON-RPC, streaming a task lifecycle (submitted → working → input-required → completed) with artifacts. Backend console + frontend Concierge.",
+  "keywords": ["TYPO3", "A2A", "agent2agent", "agent-card", "json-rpc", "interoperability", "tasks"],
+  "homepage": "https://webconsulting.at",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "webconsulting GmbH",
+      "email": "office@webconsulting.at",
+      "homepage": "https://webconsulting.at"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/dirnbauer/typo3-a2a-integration/issues",
+    "source": "https://github.com/dirnbauer/typo3-a2a-integration"
+  },
+  "require": {
+    "php": "^8.3",
+    "typo3/cms-core": "^14.3",
+    "typo3/cms-backend": "^14.3",
+    "typo3/cms-fluid": "^14.3",
+    "typo3/cms-extbase": "^14.3"
+  },
+  "suggest": {
+    "netresearch/nr-llm": "Back the local A2A agent with a real LLM instead of the bundled deterministic one.",
+    "friendsoftypo3/content-blocks": "Provides the frontend 'A2A Concierge' content element."
+  },
+  "autoload": {
+    "psr-4": {
+      "Webconsulting\\A2aIntegration\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "a2a_integration"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect x="3" y="3" width="42" height="42" rx="9" fill="#e6f6f4"/>
+  <rect x="3.5" y="3.5" width="41" height="41" rx="8.5" stroke="#0d9488" stroke-opacity="0.28"/>
+  <!-- two agents -->
+  <circle cx="16" cy="24" r="6.5" fill="none" stroke="#0d9488" stroke-width="2.4"/>
+  <circle cx="32" cy="24" r="6.5" fill="none" stroke="#0d9488" stroke-width="2.4"/>
+  <circle cx="16" cy="24" r="2.2" fill="#0d9488"/>
+  <circle cx="32" cy="24" r="2.2" fill="#0d9488"/>
+  <!-- task handoff -->
+  <path d="M23 21h2.5M24 19l1.8 2-1.8 2" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 27h-2.5M24 25l-1.8 2 1.8 2" fill="none" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

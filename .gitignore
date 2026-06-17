@@ -1,0 +1,5 @@
+/vendor/
+/node_modules/
+/Resources/Public/ContentBlocks/
+.DS_Store
+composer.lock
