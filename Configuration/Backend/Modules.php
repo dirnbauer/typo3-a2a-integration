@@ -5,12 +5,12 @@ declare(strict_types=1);
 use Webconsulting\A2aIntegration\Controller\A2aController;
 
 return [
-    'web_a2a' => [
-        'parent' => 'web',
-        'position' => ['after' => 'web_info'],
+    'agentstack_a2a' => [
+        'parent' => 'agentstack',
+        'position' => ['after' => 'agentstack_overview'],
         'access' => 'user',
         'workspaces' => 'live',
-        'path' => '/module/web/a2a',
+        'path' => '/module/agentstack/a2a',
         'labels' => 'LLL:EXT:a2a_integration/Resources/Private/Language/locallang_mod.xlf',
         'extensionName' => 'A2aIntegration',
         'iconIdentifier' => 'a2a-module',

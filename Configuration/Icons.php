@@ -9,4 +9,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:a2a_integration/Resources/Public/Icons/module-a2a.svg',
     ],
+    'a2a-plugin-concierge' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:a2a_integration/Resources/Public/Icons/plugin-concierge.svg',
+    ],
 ];

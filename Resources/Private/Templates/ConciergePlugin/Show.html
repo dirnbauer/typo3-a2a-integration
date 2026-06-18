@@ -1,16 +1,15 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:asset.css identifier="a2a-concierge" href="{f:uri.resource(path: 'Css/a2a-frontend.css', extensionName: 'a2a_integration')}" />
 
 <section class="a2a-cc"
-         style="--a2a-accent: {f:if(condition: data.accent, then: data.accent, else: '#0d9488')};"
+         style="--a2a-accent: {f:if(condition: settings.accent, then: settings.accent, else: '#0d9488')};"
          data-a2a-concierge
          data-run-url="/index.php?eID=a2a_concierge"
-         data-page="{data.pid}"
-         data-placeholder="{data.placeholder}"
-         data-show-events="{f:if(condition: data.show_events, then: '1', else: '0')}">
+         data-page="{pageId}"
+         data-placeholder="{settings.placeholder}"
+         data-show-events="{f:if(condition: settings.show_events, then: '1', else: '0')}">
 
     <div class="a2a-cc__panel">
         <div class="a2a-cc__head">
@@ -21,8 +20,8 @@
             <f:if condition="{data.header}">
                 <h2 class="a2a-cc__title">{data.header}</h2>
             </f:if>
-            <f:if condition="{data.intro}">
-                <p class="a2a-cc__intro">{data.intro}</p>
+            <f:if condition="{settings.intro}">
+                <p class="a2a-cc__intro">{settings.intro}</p>
             </f:if>
         </div>
 
@@ -36,7 +35,7 @@
             <span class="a2a-cc__bar-icon" aria-hidden="true">
                 <svg viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H8l-3.5 3v-3H3a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1z"/></svg>
             </span>
-            <input type="text" class="a2a-cc__input" data-a2a-intent placeholder="{data.placeholder}" aria-label="Describe the task" />
+            <input type="text" class="a2a-cc__input" data-a2a-intent placeholder="{settings.placeholder}" aria-label="Describe the task" />
             <button type="submit" class="a2a-cc__go" data-a2a-send>
                 <span>Delegate</span>
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg>

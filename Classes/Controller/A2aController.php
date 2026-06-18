@@ -29,9 +29,7 @@ use Webconsulting\A2aIntegration\Service\TaskLogger;
 final class A2aController extends ActionController
 {
     private const CSS = 'EXT:a2a_integration/Resources/Public/Css/a2a-backend.css';
-    private const GSAP = 'EXT:a2a_integration/Resources/Public/JavaScript/vendor/gsap.min.js';
     private const JS_CONSOLE = '@webconsulting/a2a-integration/a2a-console.js';
-    private const JS_EXPLAINER = '@webconsulting/a2a-integration/a2a-explainer.js';
 
     /** The lifecycle states an A2A task moves through (for the Skill Inspector). */
     private const STATES = [
@@ -64,8 +62,6 @@ final class A2aController extends ActionController
     public function consoleAction(): ResponseInterface
     {
         $this->pageRenderer->addCssFile(self::CSS);
-        $this->pageRenderer->addJsFile(self::GSAP);
-        $this->pageRenderer->loadJavaScriptModule(self::JS_EXPLAINER);
         $this->pageRenderer->loadJavaScriptModule(self::JS_CONSOLE);
 
         $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
@@ -124,7 +120,7 @@ final class A2aController extends ActionController
             );
         }
         $buttonBar->addButton(
-            $buttonBar->makeShortcutButton()->setRouteIdentifier('web_a2a')->setDisplayName('A2A Console'),
+            $buttonBar->makeShortcutButton()->setRouteIdentifier('agentstack_a2a')->setDisplayName('A2A Console'),
             ButtonBar::BUTTON_POSITION_RIGHT,
         );
     }

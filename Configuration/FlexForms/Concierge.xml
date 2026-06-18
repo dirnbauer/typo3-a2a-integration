@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>A2A Expert Router</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.intro>
+                        <label>Intro text</label>
+                        <description>Shown above the concierge. Invite the visitor to delegate a task.</description>
+                        <config>
+                            <type>text</type>
+                            <cols>48</cols>
+                            <rows>3</rows>
+                            <default>Ask our site agent to summarise a page, draft an email or plan onboarding. Watch the task move through its lifecycle and hand you back a result.</default>
+                        </config>
+                    </settings.intro>
+                    <settings.placeholder>
+                        <label>Input placeholder</label>
+                        <config>
+                            <type>input</type>
+                            <default>e.g. "Draft an outreach email about our new plans"</default>
+                        </config>
+                    </settings.placeholder>
+                    <settings.accent>
+                        <label>Accent colour</label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>#0d9488</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0">A2A teal (default)</numIndex>
+                                    <numIndex index="1">#0d9488</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">Match site (theme primary)</numIndex>
+                                    <numIndex index="1">var(--primary)</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">Ocean blue</numIndex>
+                                    <numIndex index="1">#2563eb</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">Indigo</numIndex>
+                                    <numIndex index="1">#4f46e5</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">Amber</numIndex>
+                                    <numIndex index="1">#d97706</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.accent>
+                    <settings.show_events>
+                        <label>Show the lifecycle frames</label>
+                        <description>Reveals an "under the hood" panel listing the A2A JSON-RPC frames as they arrive. Turn off for a clean production look.</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <default>1</default>
+                            <items>
+                                <numIndex index="0">
+                                    <numIndex index="0"></numIndex>
+                                    <numIndex index="1"></numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.show_events>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

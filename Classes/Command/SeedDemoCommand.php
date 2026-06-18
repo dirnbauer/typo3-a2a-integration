@@ -14,16 +14,16 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
- * Seed the A2A Concierge demo content element onto a page. Idempotent: re-running
+ * Seed the A2A Concierge demo plugin onto a page. Idempotent: re-running
  * refreshes the existing element (matched by CType + page) instead of duplicating.
  */
 #[AsCommand(
     name: 'a2a:seed:demo',
-    description: 'Place (or refresh) the A2A Concierge content element on a page. Idempotent.',
+    description: 'Place (or refresh) the A2A Concierge plugin on a page. Idempotent.',
 )]
 final class SeedDemoCommand extends Command
 {
-    private const CTYPE = 'a2a_concierge';
+    private const CTYPE = 'a2aintegration_concierge';
 
     public function __construct(
         private readonly ConnectionPool $connectionPool,
@@ -55,9 +55,6 @@ final class SeedDemoCommand extends Command
             'sorting' => (int)$input->getOption('sorting'),
             'header' => (string)$input->getOption('header'),
             'header_layout' => '0',
-            'webconsulting_intro' => 'Ask our site\'s agent to summarise a page, draft an email or plan onboarding. Watch the task move through its lifecycle and hand you back an artifact.',
-            'webconsulting_accent' => '#0d9488',
-            'webconsulting_show_events' => 1,
             'tstamp' => time(),
         ];
 
