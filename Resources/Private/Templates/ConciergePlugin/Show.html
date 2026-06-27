@@ -4,7 +4,7 @@
 <f:asset.css identifier="a2a-concierge" href="{f:uri.resource(path: 'Css/a2a-frontend.css', extensionName: 'a2a_integration')}" />
 
 <section class="a2a-cc"
-         style="--a2a-accent: {f:if(condition: settings.accent, then: settings.accent, else: '#0d9488')};"
+         data-accent="{f:if(condition: settings.accent, then: settings.accent, else: 'a2a')}"
          data-a2a-concierge
          data-run-url="/index.php?eID=a2a_concierge"
          data-page="{pageId}"
@@ -55,6 +55,6 @@
     </noscript>
 </section>
 
-<script type="module" src="{f:uri.resource(path: 'JavaScript/a2a-concierge.js', extensionName: 'a2a_integration')}"></script>
+<f:asset.script identifier="a2a-concierge" src="{f:uri.resource(path: 'JavaScript/a2a-concierge.js', extensionName: 'a2a_integration')}" type="module" />
 
 </html>

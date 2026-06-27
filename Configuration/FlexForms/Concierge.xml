@@ -24,31 +24,31 @@
                         </config>
                     </settings.placeholder>
                     <settings.accent>
-                        <label>Accent colour</label>
+                        <label>Accent token</label>
                         <config>
                             <type>select</type>
                             <renderType>selectSingle</renderType>
-                            <default>#0d9488</default>
+                            <default>a2a</default>
                             <items>
                                 <numIndex index="0">
-                                    <numIndex index="0">A2A teal (default)</numIndex>
-                                    <numIndex index="1">#0d9488</numIndex>
+                                    <numIndex index="0">A2A protocol accent</numIndex>
+                                    <numIndex index="1">a2a</numIndex>
                                 </numIndex>
                                 <numIndex index="1">
-                                    <numIndex index="0">Match site (theme primary)</numIndex>
-                                    <numIndex index="1">var(--primary)</numIndex>
+                                    <numIndex index="0">Theme primary</numIndex>
+                                    <numIndex index="1">primary</numIndex>
                                 </numIndex>
                                 <numIndex index="2">
-                                    <numIndex index="0">Ocean blue</numIndex>
-                                    <numIndex index="1">#2563eb</numIndex>
+                                    <numIndex index="0">Theme accent</numIndex>
+                                    <numIndex index="1">accent</numIndex>
                                 </numIndex>
                                 <numIndex index="3">
-                                    <numIndex index="0">Indigo</numIndex>
-                                    <numIndex index="1">#4f46e5</numIndex>
+                                    <numIndex index="0">Theme secondary</numIndex>
+                                    <numIndex index="1">secondary</numIndex>
                                 </numIndex>
                                 <numIndex index="4">
-                                    <numIndex index="0">Amber</numIndex>
-                                    <numIndex index="1">#d97706</numIndex>
+                                    <numIndex index="0">Theme destructive</numIndex>
+                                    <numIndex index="1">destructive</numIndex>
                                 </numIndex>
                             </items>
                         </config>
